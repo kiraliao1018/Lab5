@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <wiringPi.h>
 #include <time.h>
@@ -29,7 +30,8 @@ void setup() {
 }
 
 void alarmOff() {
-	delay(200);
+	printf("off..\n");
+	delay(2000);
 	digitalWrite(BLUE_LED, HIGH);
 	digitalWrite(RED_LED, LOW);
 	digitalWrite(BUZZER, LOW);
@@ -119,7 +121,7 @@ void alarmSounding() {
 }
 
 int main(int argc, char *argv[]) {
-  printf("x\n");
+  printf("\n");
   setup();
 	  
   while(1) {
